@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Hypnos — a Castalia Institute project exploring sleep, dreams, and the inner life.">
+  <title>Hypnos — Castalia Institute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --night: #101827;
+      --ink: #e8e6df;
+      --muted: #a7b0bf;
+      --gold: #d8bd82;
+      --line: rgba(232, 230, 223, .19);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 50% 42%, rgba(72, 91, 125, .25), transparent 42rem),
+        var(--night);
+      font-family: "DM Sans", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    main {
+      width: min(100%, 46rem);
+      text-align: center;
+      padding: 4rem 1.5rem 3.5rem;
+      animation: arrive 1.1s ease-out both;
+    }
+
+    .moon {
+      width: 3.25rem;
+      height: 3.25rem;
+      margin: 0 auto 2.5rem;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      position: relative;
+      transform: rotate(-28deg);
+    }
+
+    .moon::after {
+      content: "";
+      position: absolute;
+      inset: -3px -8px 3px 8px;
+      border-radius: 50%;
+      background: var(--night);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: .85rem 0 1.25rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(4rem, 12vw, 7rem);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: 1;
+    }
+
+    .rule {
+      width: 3rem;
+      height: 1px;
+      margin: 2rem auto;
+      background: var(--gold);
+    }
+
+    .intro {
+      max-width: 33rem;
+      margin: 0 auto;
+      color: var(--muted);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      line-height: 1.75;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    footer a { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: .25rem; }
+    footer a:hover { color: var(--gold); }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="eyebrow">A Castalia Institute project</div>
+    <h1>Hypnos</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="intro">An exploration of sleep, dreams, and the inner life.</p>
+    <footer><a href="https://castalia.institute">Castalia Institute</a></footer>
+  </main>
+</body>
+</html>
